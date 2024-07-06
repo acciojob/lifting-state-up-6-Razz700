@@ -7,7 +7,6 @@ const App = () => {
   const todos=['todo1','todo2','todo3'];
   let completedTodos=[false,false,false];
   const handleComplete=(todoval,btn)=>{
-console.log('hih',todoval,btn);
 todos.forEach((item,i)=>{
   if (todoval==item) {
     completedTodos[i]=true;

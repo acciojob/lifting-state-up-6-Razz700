@@ -9,12 +9,12 @@ const App = () => {
   const handleComplete=(todoval,btn)=>{
 todos.forEach((item,i)=>{
   if (todoval==item) {
-   // todos[i]='complete';
+   todos[i]='Complete';
     completedTodos[i]='Complete';
     btn.style.display='none';
   }
 });
-console.log('sdf',completedTodos);
+console.log('sdf',completedTodos,todos);
   }
   return (
     <div>

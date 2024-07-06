@@ -1,13 +1,13 @@
 import React from 'react'
 
 const TodoList = (props) => {
-    console.log(props.todos); 
+   // console.log(props.todos,props.state); 
   return (
     <div>
    <h2>Child Component</h2>
    <ul>
    {props.todos.map((item,i)=>{return(
-    <li key={i}>{item}  <button onClick={(e)=>{props.handlefunc(item,e.target)}}>Complete</button></li>
+    <li key={i}>{item} {props.state[i] && <button onClick={()=>{props.handlefunc(item,i)}}>Complete</button>} </li>
    )}
    )}
    </ul>

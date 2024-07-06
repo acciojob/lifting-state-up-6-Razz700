@@ -13,7 +13,7 @@ todos.forEach((item,i)=>{
   //  todoState[i]=false;
     settodoState(todoState.map((val,j)=>j==k?false:val));
   //console.log(todoState);}
-});
+}});
   }
   return (
     <div>

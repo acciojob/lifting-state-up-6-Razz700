@@ -10,7 +10,7 @@ const App = () => {
 todos.forEach((item,i)=>{
   if (todoval==item) {
     Complete[i]='Complete';
-    btn.style.display='none';
+    btn.remove();
   }
 });
 console.log('sdf',Complete);

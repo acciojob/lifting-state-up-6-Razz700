@@ -5,15 +5,12 @@ import TodoList from "./TodoList";
 
 const App = () => {
   const todos=['todo1','todo2','todo3'];
-  let Complete=[false,false,false];
   const handleComplete=(todoval,btn)=>{
 todos.forEach((item,i)=>{
   if (todoval==item) {
-    Complete[i]='Complete';
     btn.remove();
   }
 });
-console.log('sdf',Complete);
   }
   return (
     <div>

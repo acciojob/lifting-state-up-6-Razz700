@@ -5,12 +5,12 @@ import TodoList from "./TodoList";
 
 const App = () => {
   const todos=['todo1','todo2','todo3'];
-  let completedTodos=[false,false,false];
+  let Complete=[false,false,false];
   const handleComplete=(todoval,btn)=>{
 todos.forEach((item,i)=>{
   if (todoval==item) {
-   todos[i]+=' Complete';
-    completedTodos[i]='Complete';
+   todos[i]='Complete';
+    Complete[i]='Complete';
     btn.style.display='none';
   }
 });

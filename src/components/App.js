@@ -4,8 +4,8 @@ import './../styles/App.css';
 import TodoList from "./TodoList";
 
 const App = () => {
-  const [check,setcheck]=useState(false);
-  const todos=['todo1','todo2','todo3'];
+  const [check,setcheck]=useState('false');
+  const todos=['Learn React','Build a React app','Deploy the React app'];
   const [todoState,settodoState]= useState([true,true,true]);
   const handleComplete=(todoval,k)=>{
     setcheck(true);

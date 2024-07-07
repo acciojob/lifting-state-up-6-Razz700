@@ -10,13 +10,12 @@ const App = () => {
     {text:'Deploy the React app',isCompleted:false}];
     const [item1,setitem1]=useState(todos);
   //const [todoState,settodoState]= useState([true,true,true]);
-  const handleComplete=(todoval)=>{
+  const handleComplete=(index)=>{
 const newtodos=[...item1]
-newtodos.forEach((item)=>{
-  if (todoval==item.text) {  
+newtodos.forEach((item,i)=>{
+  if (index==i) {  
   item.isCompleted=true;
    // settodoState(todoState.map((val,j)=>j==k?false:val));
-  //console.log(todoState);}
 }});
 
 setitem1(newtodos);

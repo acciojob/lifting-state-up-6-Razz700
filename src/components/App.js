@@ -9,8 +9,10 @@ const App = () => {
     {text:'Build a React app',isCompleted:false},
     {text:'Deploy the React app',isCompleted:false}];
     const [item1,setitem1]=useState(todos);
+    const [key,setkey]=useState(0);
   //const [todoState,settodoState]= useState([true,true,true]);
   const handleComplete=(index)=>{
+    setkey(key=>key+1);
 setitem1(item1 => {
   const newTodos = [...item1];
   newTodos[index].isCompleted = true;
@@ -20,7 +22,7 @@ setitem1(item1 => {
   return (
     <div>
   <h1>Parent Component</h1>
-      <TodoList  todos={item1} handlefunc={handleComplete} />
+      <TodoList key={key}  todos={item1} handlefunc={handleComplete} />
         {/* Do not remove the main div */}   
     </div>
   )

@@ -4,9 +4,11 @@ import './../styles/App.css';
 import TodoList from "./TodoList";
 
 const App = () => {
+  const [check,setcheck]=useState(false);
   const todos=['todo1','todo2','todo3'];
   const [todoState,settodoState]= useState([true,true,true]);
   const handleComplete=(todoval,k)=>{
+    setcheck(true);
 todos.forEach((item,i)=>{
   if (todoval==item) {
     // console.log(todoState);
@@ -16,9 +18,10 @@ todos.forEach((item,i)=>{
   }
   return (
     <div>
-  <h1>Parent Component</h1>
+  <h1>Parent Component{check}</h1>
       <TodoList  todos={todos} handlefunc={handleComplete} state={todoState}/>
         {/* Do not remove the main div */}
+        {check}
     </div>
   )
 }

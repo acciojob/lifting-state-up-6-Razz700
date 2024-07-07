@@ -5,11 +5,11 @@ const TodoList = (props) => {
     <div>
    <h2>Child Component</h2>
    <ul>
-   {props.todos.map((item,i)=>{return(
+   {props.todos.map((item,i)=>
     <li key={i}>{item} {props.state[i] && <button key={'b'+i} onClick={()=>{
       props.handlefunc(item,i);
     }}>Complete</button>} </li>
-   )}
+   
    )}
    </ul>
    </div>

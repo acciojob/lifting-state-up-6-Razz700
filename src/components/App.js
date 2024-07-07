@@ -11,14 +11,11 @@ const App = () => {
     const [item1,setitem1]=useState(todos);
   //const [todoState,settodoState]= useState([true,true,true]);
   const handleComplete=(index)=>{
-const newtodos=[...item1]
-newtodos.forEach((item,i)=>{
-  if (index==i) {  
-  item.isCompleted=true;
-   // settodoState(todoState.map((val,j)=>j==k?false:val));
-}});
-
-setitem1(newtodos);
+setitem1(item1 => {
+  const newTodos = [...item1];
+  newTodos[index].isCompleted = true;
+  return newTodos;
+});
   }
   return (
     <div>

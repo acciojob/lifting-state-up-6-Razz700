@@ -1,15 +1,14 @@
 import React from 'react'
-const TodoList = (props) => {
-   // console.log(props.todos,props.state); 
+const TodoList = (props) => { 
   return (
     <div>
    <h2>Child Component</h2>
    <ul>
-   {props.todos.map((item,i)=>
-    <li key={i}>{item} {props.state[i] && <button key={'b'+i} onClick={()=>{
-      props.handlefunc(item,i);
-    }}>Complete</button>} </li>
-   
+   {props.todos.map((item,i)=>{
+    return(<li key={i}>{item.text} {!item.isCompleted && <button key={'b'+i} onClick={()=>{
+      props.handlefunc(item.text);
+    }}>Complete</button>} </li>)}
+    
    )}
    </ul>
    </div>

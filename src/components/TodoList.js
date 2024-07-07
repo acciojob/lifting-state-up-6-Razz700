@@ -6,7 +6,7 @@ const TodoList = (props) => {
    <h2>Child Component</h2>
    <ul>
    {props.todos.map((item,i)=>{return(
-    <li key={i}>{item} {props.state[i] && <button onClick={()=>{
+    <li key={i}>{item} {props.now && <button onClick={()=>{
       props.handlefunc(item,i);
     }}>Complete</button>} </li>
    )}
